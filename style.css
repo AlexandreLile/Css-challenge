@@ -223,6 +223,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 25px;
+    position: relative;
   }
 
   .citation blockquote {
@@ -357,9 +358,116 @@
     text-decoration: none;
     color: #68d585;
   }
+
+  .cta_section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 15px;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .content_cta {
+    margin: 0 auto;
+  }
+  .content_cta h2 {
+    padding-block-end: 15px;
+    font-size: 2rem;
+  }
+
+  .cta_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+  }
+
+  .btn_dark {
+    text-decoration: none;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    padding: 10px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+  }
+
+  .btn_light {
+    text-decoration: none;
+    background-color: #edecfe;
+    color: var(--color-primary);
+    padding: 10px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+  }
+
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 25px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer_brand {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer_brand a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-size: 1.5rem;
+  }
+  footer .container_footer_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-inline-start: 0;
+  }
+
+  .link_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0;
+    max-width: 200px;
+  }
+
+  footer ul p {
+    padding-block-end: 15px;
+    font-size: 15px;
+  }
+  .link_list li {
+  }
+
+  @media screen and (min-width: 860px) {
+    .citation::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 40%;
+      top: 50%;
+      left: 50%;
+      background-color: #bdbdbd;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+  }
+
   @media screen and (min-width: 720px) {
     .site-header {
-      background-color: #ffffffa1;
+      background-color: var(--color-light);
     }
 
     .site-header ul[role="navigation"] {
@@ -379,6 +487,10 @@
     .site-header ul[role="navigation"] > li a {
       padding: 0;
       display: inline;
+    }
+
+    footer {
+      flex-direction: row;
     }
   }
 }
